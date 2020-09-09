@@ -1,0 +1,226 @@
+
+*{
+    box-sizing: border-box;
+}
+section, article {
+    margin: 0;
+    padding: 0;
+}
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 1.1fr 1.4fr 1.0fr;
+        gap: 20px 20px;
+        grid-template-areas:
+          "toppen toppen toppen toppen"
+          "todo todo todo todo"
+          "main main main main"
+          "liste liste liste liste";
+      }
+      
+      .toppen { grid-area: toppen; }
+      
+      .todo { grid-area: todo; }
+      
+      .main { grid-area: main; }
+      
+      .liste { grid-area: liste; }
+  
+    
+
+      .toppen{
+          box-shadow: 0px 4px 3px -2px rgba(181,181,181,1);
+      }
+      #rightallign{
+          float: right;
+      }
+      #h1title{
+          float: left;
+      }
+
+      .todo{
+          width: 100%;
+          margin-top: 30px;
+          height: 50px;
+     
+          
+      }
+      #h1title{
+        margin-left: 4%;
+      }
+      .createtodo{
+          width: 15%;
+          height: 100%;
+          margin-left: 10%;
+          border: 1px solid black;
+          text-size-adjust: 30px;
+          background-color: white;
+      }
+      .createtodo:hover{
+          background-color: turquoise;
+      }
+
+      .main{
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 30px;
+    
+        }
+        
+      .test{
+        background-color:white;
+        position: relative;
+        display: inline-block;
+        flex:1;
+        width: 30%;
+        height: auto;
+        padding: 2em;
+        margin: 15px;
+        box-shadow: 0px 4px 6px 1px rgba(178,250,255,1);
+      
+    }
+    .todopara{
+        width: 100%;
+        margin: 5px;
+    }
+
+    article button{
+       
+        width: 30%;
+        float: right;
+    }
+    .buttondiv{
+        position: absolute;
+     border: 1 px solid black;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        margin-bottom: 20px;
+
+    }
+    
+
+    .complete{
+    
+        margin-left: 10px;
+        background-color: green;
+        color: white;
+        border-radius: 8px;
+        text-align:center;
+     
+    }
+    .delete{
+    
+        background-color: red;
+        color: white;
+        border-radius: 8px;
+        text-align:center;
+
+    }
+    .delete:hover{
+        background-color: red;
+        opacity: 0.7;
+    }
+    .complete:hover{
+    background-color: green;
+    opacity: 0.7;
+}
+
+      #main{
+    
+        margin-left: 10%;
+    } 
+
+    .modal-bg{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s;
+      
+      }
+      .bg-active{
+        visibility: visible;
+        opacity: 1;
+      }
+      
+      .modal{
+        position: relative;
+        background-color: white;
+        width: 30%;
+        height: 40%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 5px;
+       
+      }
+      
+      .modal button{
+        padding: 10px 30px;
+        background-color: lightgreen;
+        columns:white;
+        border:none;
+        cursor: pointer;
+        width: 50%;
+      
+      }
+      .modal-close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      }
+      .modal input{
+        width: 50%;
+        height: 40px;
+        position: center;
+        margin-top: 0;
+      }
+      
+      .modal p{
+        position: absolute;
+        top: 10px;
+       left: 20px;
+      
+      }
+      .modal label{
+        width: 50%;
+        height: 4%;
+        margin-left: 10px;
+      }
+      .topmodal{
+        box-shadow: 0px 1px 0px 0px lightgrey;
+        width: 100%;
+        height: 15%;
+      }
+      
+      .completedtodos{
+        grid-area: liste;
+        width: 100%;
+      margin-left: 3%;
+      margin-top: auto;
+      padding: 2px;
+      }
+      
+      table, th{
+        background-color: white;
+      }
+      th, td{
+          padding: 15px;
+          text-align: left;
+      }
+      
+      #FirstLine th {
+        background-color:lightgray;
+        border-collapse: collapse;
+      }
